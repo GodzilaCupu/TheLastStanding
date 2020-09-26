@@ -348,7 +348,7 @@ CharacterController:
   m_Height: 2
   m_Radius: 0.5
   m_SlopeLimit: 45
-  m_StepOffset: 0.53
+  m_StepOffset: 0.6
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
@@ -360,11 +360,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 756174934}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.31, z: 0}
+  m_LocalPosition: {x: 0, y: 10.45, z: 0}
   m_LocalScale: {x: 1, y: 1.3, z: 1}
   m_Children:
   - {fileID: 1227384400}
   - {fileID: 963194228}
+  - {fileID: 873769268}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -382,6 +383,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 756174935}
   speed: 10
+  gravity: -19.62
+  jumpHeight: 3
+  groundCheck: {fileID: 873769268}
+  groundDistance: 0.4
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!1 &873769267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 873769268}
+  m_Layer: 0
+  m_Name: groundcheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &873769268
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873769267}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 756174936}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &894160154
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,7 +432,7 @@ GameObject:
   - component: {fileID: 894160157}
   - component: {fileID: 894160156}
   - component: {fileID: 894160155}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -485,7 +523,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 895510647}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tangga containner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -787,10 +825,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tangga3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 43a448c6751b6d942ae7b6793eea0cbf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8164078558771037576, guid: 43a448c6751b6d942ae7b6793eea0cbf,
         type: 3}
       propertyPath: m_Name
       value: Tangga3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: 43a448c6751b6d942ae7b6793eea0cbf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43a448c6751b6d942ae7b6793eea0cbf, type: 3}
@@ -876,10 +924,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tangga2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dd2b42dd51468644882674eb992f0864,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8164078558771037576, guid: dd2b42dd51468644882674eb992f0864,
         type: 3}
       propertyPath: m_Name
       value: Tangga2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: dd2b42dd51468644882674eb992f0864,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd2b42dd51468644882674eb992f0864, type: 3}
